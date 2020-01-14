@@ -1,14 +1,43 @@
 <template>
   <div id="app">
+      
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="#"><img src="./assets/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <router-link to="/Home">Home</router-link> <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#"><router-link to="/Login">Login</router-link> <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#"><router-link to="/Register">Register</router-link> <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#"><router-link to="/Secret">Secret</router-link> <span class="sr-only">(current)</span></a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <div id="Header">
     <Top-Header></Top-Header>
+      </div>
+  </div>
+</nav>
 
-    <div id="nav">
-      <router-link to="/about">About</router-link> |
-      <router-link to="/Login">Login</router-link> |
-      <router-link to="/Register">Register</router-link> |
-      <router-link to="/Secret">Secret</router-link>
-    </div>
+
+
+
+    
     <router-view/>
   </div>
 </template>
@@ -29,7 +58,19 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+#Header{
+  float:right;
+  width: 150px;
+  height: 50px;
 
+
+}
+img{
+  width: 100px;
+  height: 100px;
+
+
+}
 #nav {
   padding: 30px;
 
