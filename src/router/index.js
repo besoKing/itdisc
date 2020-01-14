@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Secret from '../views/Secret.vue'
-
+import Proizvodi from '../views/Proizvodi.vue'
 import * as firebase from "firebase/app";
 import "firebase/auth";
 
@@ -13,7 +13,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home
   },
   {
@@ -31,6 +31,11 @@ const routes = [
     name: 'Secret',
     component: Secret,
     meta:{requiresAuth: true}
+  },
+  {
+    path: '/Proizvodi',
+    name: 'Proizvodi',
+    component: Proizvodi
   }
   
 ]

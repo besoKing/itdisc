@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"> <router-link to="/Home">Home</router-link> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"> <router-link to="/Proizvodi">Proizvodi</router-link> <span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item active">
         <a class="nav-link" href="#"><router-link to="/Login">Login</router-link> <span class="sr-only">(current)</span></a>
@@ -39,7 +39,9 @@
 
     
     <router-view/>
+    
   </div>
+  
 </template>
 
 
