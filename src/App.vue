@@ -3,7 +3,7 @@
       
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   
-  <a class="navbar-brand" href="#"><img src="./assets/logo.png"></a>
+  <a class="navbar-brand" href="/Proizvodi"><img src="./assets/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,17 +30,26 @@
     </form>
     <div id="Header">
     <Top-Header></Top-Header>
+    
       </div>
   </div>
+  
 </nav>
+
 
 
 
 
     
     <router-view/>
+     <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
     
   </div>
+  
   
 </template>
 
@@ -58,12 +67,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  
 }
 #Header{
   float:right;
   width: 150px;
   height: 50px;
+  
 
 
 }
@@ -73,16 +83,18 @@ img{
 
 
 }
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: lightcyan;
+  
 }
+.nav {
+  padding: 30px;
+  background-color: lightcyan;
+  }
+
 </style>
