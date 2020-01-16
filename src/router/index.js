@@ -7,7 +7,7 @@ import Secret from '../views/Secret.vue'
 import Proizvodi from '../views/Proizvodi.vue'
 import * as firebase from "firebase/app";
 import "firebase/auth";
-import scraper  from './scraper';
+
 
 Vue.use(VueRouter)
 

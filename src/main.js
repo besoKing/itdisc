@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import axios from "axios";
 import firebase from "firebase/app";
-import scraper  from './scraper';
+
 
 
 Vue.prototype.$axios = axios;
