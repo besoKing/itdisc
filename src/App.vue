@@ -3,16 +3,13 @@
       
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   
-  <a class="navbar-brand" href="/Proizvodi"><img src="./assets/logo.png"></a>
+  <a class="navbar-brand" href="/Home"><img src="./assets/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"> <router-link to="/Proizvodi">Proizvodi</router-link> <span class="sr-only">(current)</span></a>
-      </li>
        <li class="nav-item active">
         <a class="nav-link" href="#"><router-link to="/Login">Login</router-link> <span class="sr-only">(current)</span></a>
       </li>
@@ -36,17 +33,20 @@
   
 </nav>
 
-
+<div class="col-sm-3">
+      
+ <div class="sidebar">
+  <a class="sidebar-link" href="/Trgovine">Prikaz trgovina</a>
+  <a class="sidebar-link" href="/Proizvodi">Proizvodi</a>
+</div>
+ 
+</div>
 
 
 
     
     <router-view/>
-     <footer class="footer">
-      <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-      </div>
-    </footer>
+     
     
   </div>
   
@@ -96,5 +96,62 @@ img{
   padding: 30px;
   background-color: lightcyan;
   }
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
 
 </style>
