@@ -5,15 +5,21 @@ import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Secret from '../views/Secret.vue'
 import Proizvodi from '../views/Proizvodi.vue'
+import Trgovine from '../views/Trgovine.vue'
 import * as firebase from "firebase/app";
 import "firebase/auth";
-import scraper  from './scraper';
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/Home',
     name: 'Home',
     component: Home
   },
@@ -36,9 +42,15 @@ const routes = [
   {
     path: '/Proizvodi',
     name: 'Proizvodi',
-    component: Proizvodi
+    component: Proizvodi,
+    meta:{requiresAuth: true}
+  },
+  {
+    path: '/Trgovine',
+    name: 'Trgovine',
+    component: Trgovine,
+    meta:{requiresAuth: true}
   }
-  
 ]
 
 const router = new VueRouter({
