@@ -1,15 +1,34 @@
 <template>
-<div class="container text-center">
-<div class="col-lg-4 col-lg-offset-4"></div>
-<Kartica></Kartica>
-</div>
+  <main id="Karticatrgovine">
+      <section class="Trgovine">
+
+      </section>
+  </main>
 </template>
 
 <script>
-import Kartica from "@/components/Kartica";
-export default {
-  components: {'Kartica': Kartica}
-}
+  
+   export default{
+        name:'Karticatrgovine',
+        components:{},
+        data(){
+            return{
+                Trgovine:[
+                    {
+                        title:'Links',
+                        color:'green',
+                        bgtext:'LINKS',
+                        
+                    },
+                    {
+                        title:'HGspot',
+                        color:'blue',
+                        bgtext:'HGSPOT'
+                    }
+                ]
+            }
+        }
+    }
 </script>
     
 <style lang="scss">
