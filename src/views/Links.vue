@@ -3,6 +3,7 @@
 <div id="links">
     <div class="container">
         <h4>Links</h4>
+        <div class="card text-center">
         <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
             <div class="artikl">
                 {{linkse.artikl}}
@@ -11,6 +12,7 @@
                 <h4>Nova cijena: {{linkse.newprc}}</h4>
                 <h8>Stara cijena: {{linkse.oldprc}}</h8>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -52,4 +54,7 @@ export default {
         padding: 25px;
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     }
+    .card {
+    margin: 10px
+  }
 </style>
