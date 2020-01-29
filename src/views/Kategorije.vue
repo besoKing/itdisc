@@ -7,6 +7,15 @@
         </div>
     </div>
 
+    <div class="card text-center">
+        <div class="card-body">
+            <router-link to="/Laptopi"><img src="@/assets/laptop.png"></router-link>
+            <h4>Laptopi</h4>
+        </div>
+       
+    </div>
+    
+
     </div>
 </template>
 

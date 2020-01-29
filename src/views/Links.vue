@@ -1,20 +1,22 @@
 <template>
-
-<div id="links">
-    <div class="container">
-        <h4>Links</h4>
-        <div class="card text-center">
-        <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
-            <div class="artikl">
-                {{linkse.artikl}}
-            </div>
-            <div class="price">
-                <h4>Nova cijena: {{linkse.newprc}}</h4>
-                <h8>Stara cijena: {{linkse.oldprc}}</h8>
-            </div>
+<div class="container">
+<div class="links">
+    <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
+    <div class="links-inner">
+        <div class="links-text-wrap">
+            
         </div>
+        <div class="links-image-wrap">
+            
+        </div>
+        <div class="links-detail">
+            <h2>{{linkse.artikl}}</h2>
+            <h4>Nova cijena: {{linkse.newprc}}</h4>  
+            <p>Stara cijena: {{linkse.oldprc}}</p>
         </div>
     </div>
+  </div>
+</div>
 </div>
 </template>
 
@@ -44,17 +46,67 @@ export default {
 </script>
 
 <style scoped>
-    .container{
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background-color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .links{
         flex: 1 1 33.333%;
         width: 100%;
         padding: 25px;
     }
-    .card-body{
+    .links-inner{
         position: relative;
         padding: 25px;
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     }
-    .card {
-    margin: 10px
-  }
+    .links-image-wrap{
+        position: relative;
+        z-index: 1;
+        transform-origin: center;
+    }
+    .links-image-wrap .image{
+        width: 100%;
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.25));
+    }
+    .links-text-wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .links-text-wrap h2{
+        color: #313131;
+        font-size: 128px;
+        font-weight: 900;
+        opacity: 0.2;
+        transform-origin: center;
+    }
+    .links-detail{
+        background-color: #FFF;
+        padding: 25px;
+        margin: 0px-25px;
+    }
+    .links-detail h2{
+        font-size: 24px;
+        font-weight: 700;
+        color:#676767;
+        margin-bottom: 15px;
+    }
+    .links-detail p{
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 300;
+        color: #676767;
+
+    }
 </style>

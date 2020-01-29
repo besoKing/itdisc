@@ -25,21 +25,18 @@ import Karticatrgovine from '@/components/Karticatrgovine';
                 {
                   title:'Links',
                   text:'Links d.o.o želi ponajprije zahvaliti svim onima koji su nam u proteklom periodu pružili povjerenje. Nadamo se da smo barem dijelom uspjeli opravdati Vaša očekivanja te Vam pomoći u odabiru informatičkog rješenja primjerenog Vašim zahtjevima.',
-                  color:'green',
                   bgtext:'LINKS',
                   src: require('@/assets/links.png')
                 },
                 {
                   title:'HGSpot',
                   text:'Svaki proizvod zaslužuje svog čovjeka da ga pazi, mazi i najbitnije od svega koristi. HGSPOT brine o tome da svaki TECH proizvod pronađe svog zauvijek čovjeka, zato baci oko na www.hgshop.hr :)',
-                  color:'blue',
                   bgtext:'HGSPOT',
                   src: require('@/assets/hgspot.png')   
                 },
                 {
                   title:'Instar',
                   text: 'Tvrtka Instar informatika d.o.o. posluje od 2008. godine i bavi se maloprodajom, uvozom i veleprodajom informatičke i elektroničke opreme. Naši dobavljači su renomirani domaći, europski i svjetski distributeri i proizvođači IT opreme. Zahvaljujući efikasnim logističkim rješenjima, u mogućnosti smo ponuditi najbolje cijene za artikle koje prodajemo. Držimo samo najkvalitetniju robu na tržištu po izuzetno povoljnim cijenama, što potvrđuje velik broj stalnih kupaca te kontinuirani rast novih.',
-                  color:'pink',
                   bgtext:'INSTAR',
                   src: require('@/assets/instar.png')   
                 }

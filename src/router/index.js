@@ -8,6 +8,7 @@ import Proizvodi from '../views/Proizvodi.vue'
 import Trgovine from '../views/Trgovine.vue'
 import Links from '../views/Links.vue'
 import Kategorije from '../views/Kategorije.vue'
+import Laptopi from '../views/Laptopi.vue'
 import * as firebase from "firebase/app"
 import "firebase/auth"
 
@@ -60,6 +61,11 @@ const routes = [
     path: '/Kategorije',
     name: 'Kategorije',
     component: Kategorije
+  },
+  {
+    path: '/Laptopi',
+    name: 'Laptopi',
+    component: Laptopi
   }
 ]
 
