@@ -32,7 +32,7 @@ export default {
                     'artikl':doc.data().Artikl,
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
-                    'title':doc.data().Title
+                    'title':doc.data().Title 
                 }
                 this.links.push(data)
             })
