@@ -6,14 +6,15 @@ import Register from '../views/Register.vue'
 import Secret from '../views/Secret.vue'
 import Proizvodi from '../views/Proizvodi.vue'
 import Trgovine from '../views/Trgovine.vue'
-import * as firebase from "firebase/app";
-import "firebase/auth";
+import Links from '../views/Links.vue'
+import * as firebase from "firebase/app"
+import "firebase/auth"
 
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
+ {
     path: '/',
     name: 'Home',
     component: Home
@@ -48,6 +49,11 @@ const routes = [
     path: '/Trgovine',
     name: 'Trgovine',
     component: Trgovine
+  },
+  {
+    path: '/Links',
+    name: 'Links',
+    component: Links
   }
 ]
 

@@ -27,7 +27,7 @@ import Karticatrgovine from '@/components/Karticatrgovine';
                   text:'Links d.o.o želi ponajprije zahvaliti svim onima koji su nam u proteklom periodu pružili povjerenje. Nadamo se da smo barem dijelom uspjeli opravdati Vaša očekivanja te Vam pomoći u odabiru informatičkog rješenja primjerenog Vašim zahtjevima.',
                   color:'green',
                   bgtext:'LINKS',
-                  src: require('@/assets/links.png')  
+                  src: require('@/assets/links.png')
                 },
                 {
                   title:'HGSpot',

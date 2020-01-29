@@ -5,7 +5,7 @@
             
         </div>
         <div class="trgovina-image-wrap">
-            <img :src="trgovina.src" class="image">
+            <router-link to="/Links"><img :src="trgovina.src" class="image"></router-link>
         </div>
         <div class="trgovina-detail">
             <h2>{{trgovina.title}}</h2>

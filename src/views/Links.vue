@@ -9,7 +9,7 @@
             </div>
             <div class="price">
                 <h4>Nova cijena: {{linkse.newprc}}</h4>
-                <h6>Stara cijena: {{linkse.oldprc}}</h6>
+                <h8>Stara cijena: {{linkse.oldprc}}</h8>
             </div>
         </div>
     </div>
