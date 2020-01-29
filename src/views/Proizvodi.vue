@@ -1,6 +1,7 @@
 <template>
     <div id="proizvodi">
     <div class="container">
+        <div class="card text-center">
         <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
             <div class="artikl">
                 {{linkse.artikl}}
@@ -10,6 +11,8 @@
                 <h8>Stara cijena: {{linkse.oldprc}}</h8>
             </div>
         </div>
+        </div>
+        <div class="card text-center">
          <div class="card-body" v-for="instare in instar" v-bind:key="instare.artikl">
             <div class="artikl">
                 {{instare.artikl}}
@@ -18,6 +21,7 @@
                 <h4>Nova cijena: {{instare.newprc}}</h4>
                 <h8>Stara cijena: {{instare.oldprc}}</h8>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -73,4 +77,7 @@
         padding: 25px;
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     }
+      .card {
+    margin: 10px
+  }
 </style>
