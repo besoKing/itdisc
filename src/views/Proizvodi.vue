@@ -11,8 +11,6 @@
                 <h8>Stara cijena: {{linkse.oldprc}}</h8>
             </div>
         </div>
-        </div>
-        <div class="card text-center">
          <div class="card-body" v-for="instare in instar" v-bind:key="instare.artikl">
             <div class="artikl">
                 {{instare.artikl}}
