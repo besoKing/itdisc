@@ -15,7 +15,7 @@
             <p>Stara cijena: {{linkse.oldprc}}</p>
         </div>
     </div>
-  </div>
+  </div>  
 </div>
 </div>
 </template>
@@ -107,6 +107,6 @@ export default {
         line-height: 1.5;
         font-weight: 300;
         color: #676767;
+}
 
-    }
 </style>
