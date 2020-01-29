@@ -7,6 +7,7 @@ import Secret from '../views/Secret.vue'
 import Proizvodi from '../views/Proizvodi.vue'
 import Trgovine from '../views/Trgovine.vue'
 import Links from '../views/Links.vue'
+import Kategorije from '../views/Kategorije.vue'
 import * as firebase from "firebase/app"
 import "firebase/auth"
 
@@ -54,6 +55,11 @@ const routes = [
     path: '/Links',
     name: 'Links',
     component: Links
+  },
+  {
+    path: '/Kategorije',
+    name: 'Kategorije',
+    component: Kategorije
   }
 ]
 

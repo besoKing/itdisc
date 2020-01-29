@@ -36,8 +36,10 @@
 <div class="col-sm-3">
       
  <div class="sidebar">
+   <a class="sidebar-link" href="/Home">Home</a>
   <a class="sidebar-link" href="/Trgovine">Prikaz trgovina</a>
   <a class="sidebar-link" href="/Proizvodi">Proizvodi</a>
+  <a class="sidebar-link" href="/Kategorije">Kategorije</a>
 </div>
  
 </div>
