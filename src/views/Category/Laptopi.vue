@@ -14,7 +14,7 @@
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
             <h6>Store: {{linkse.store}}</h6>
-            <button @click="gotostore">Goto Store</button>
+            <v-btn type="submit">Goto Store</v-btn>
         </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import db from '@/components/firebaseInit'
+import db from '@/main.js'
 export default {
     name:'laptopi',
     data(){
@@ -79,8 +79,8 @@ export default {
         })
     },
     methods:{
-        async gotostore(linkseurl){
-            window.open=linkse.url
+        gotostore(){
+            window.open.href=linkse.url + encodeURIComponent(linkse.url);
         }
     }
     
