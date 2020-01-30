@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="proizvodi">
+        <div class="links">
             <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
                 <div class="links-inner">
                     <div class="links-text-wrap">
@@ -38,9 +38,9 @@
 </template>
 
 <script>
-    import db from '../components/firebaseInit'
-    export default {
-    name:'proizvodi',
+import db from '@/components/firebaseInit'
+export default {
+    name:'Games',
     data(){
         return{
             links:[],
@@ -48,33 +48,36 @@
         }
     },
     created(){
-        db.collection('Links').get().then(querySnapshot => {
+        db.collection('Links').where('Title','==','Games').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'store':doc.data().Store 
+                    'url':doc.data().url,
+                    'store':doc.data().Store
                 }
                 this.links.push(data)
             })
         })
     },
     mounted(){
-        db.collection('instar').get().then(querySnapshot => {
+        db.collection('instar').where('Title','==','Games').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'store':doc.data().Store 
+                    'url':doc.data().url,
+                    'store':doc.data().Store
                 }
                 this.instar.push(data)
             })
         })
-    }
+    },
+    
 }
 </script>
 
@@ -141,10 +144,6 @@
         font-weight: 300;
         color: #676767;
 }
-    .links-detail h6{
-        display: flex;
-        justify-content: space-around;
-    }
     .instar-inner{
         position: relative;
         padding: 25px;

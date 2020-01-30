@@ -78,6 +78,17 @@
     </div>
   </div>
 
+  <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Adapteri"><h4>Adapteri</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Adapteri"><img src="../assets/adapteri.png"></router-link>
+        </div>
+    </div>
+  </div>
+
     </div>
 </template>
 

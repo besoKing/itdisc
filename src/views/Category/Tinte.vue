@@ -13,6 +13,7 @@
             <h2>{{linkse.artikl}}</h2>
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
+            <h6>Store: {{linkse.store}}</h6>
         </div>
     </div>
   </div>
@@ -28,6 +29,7 @@
             <h2>{{instare.artikl}}</h2>
             <h4>Nova cijena: {{instare.newprc}}</h4>  
             <p>Stara cijena: {{instare.oldprc}}</p>
+            <h6>Store: {{instare.store}}</h6>
         </div>
     </div>
   </div>
@@ -36,9 +38,9 @@
 </template>
 
 <script>
-import db from '../components/firebaseInit'
+import db from '@/components/firebaseInit'
 export default {
-    name:'keyboard',
+    name:'tinte',
     data(){
         return{
             links:[],
@@ -46,28 +48,30 @@ export default {
         }
     },
     created(){
-        db.collection('Links').where('Title','==','Keyboard').get().then(querySnapshot => {
+        db.collection('Links').where('Title','==','Tinta').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'url':doc.data().url
+                    'url':doc.data().url,
+                    'store':doc.data().Store
                 }
                 this.links.push(data)
             })
         })
     },
     mounted(){
-        db.collection('instar').where('Title','==','Keyboard').get().then(querySnapshot => {
+        db.collection('instar').where('Title','==','Tinta').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'url':doc.data().url
+                    'url':doc.data().url,
+                    'store':doc.data().Store
                 }
                 this.instar.push(data)
             })

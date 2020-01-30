@@ -8,13 +8,14 @@ import Proizvodi from '../views/Proizvodi.vue'
 import Trgovine from '../views/Trgovine.vue'
 import Links from '../views/Links.vue'
 import Kategorije from '../views/Kategorije.vue'
-import Laptopi from '../views/Laptopi.vue'
-import Tinte from '../views/Tinte.vue'
-import Mobile from '../views/Mobile.vue'
-import Chargers from '../views/Chargers.vue'
-import Games from '../views/Games.vue'
-import Keyboard from '../views/Keyboard.vue'
-import Headphones from '../views/Headphones.vue'
+import Laptopi from '../views/Category/Laptopi.vue'
+import Tinte from '../views/Category/Tinte.vue'
+import Mobile from '../views/Category/Mobile.vue'
+import Chargers from '../views/Category/Chargers.vue'
+import Games from '../views/Category/Games.vue'
+import Keyboard from '../views/Category/Keyboard.vue'
+import Headphones from '../views/Category/Headphones.vue'
+import Adapteri from '../views/Category/Adapteri.vue'
 import * as firebase from "firebase/app"
 import "firebase/auth"
 
@@ -102,6 +103,11 @@ const routes = [
     path: '/Headphones',
     name: 'Headphones',
     component: Headphones
+  },
+  {
+    path: '/Adapteri',
+    name: 'Adapteri',
+    component: Adapteri
   }
 ]
 
