@@ -7,10 +7,7 @@
                         <router-link to="/Chargers"><h4>Punjači</h4></router-link>
                     </div>
         <div class="kategorije-image-wrap">
-            
-        </div>
-        <div class="kategorije-detail">
-            
+            <router-link to="/Chargers"><img src="../assets/punjaci.png"></router-link>
         </div>
     </div>
   </div>
@@ -21,10 +18,7 @@
                         <router-link to="/Laptopi"><h4>Laptopi</h4></router-link>
                     </div>
         <div class="kategorije-image-wrap">
-            
-        </div>
-        <div class="kategorije-detail">
-            
+            <router-link to="/Laptopi"><img src="../assets/laptopi.png"></router-link>
         </div>
     </div>
   </div>
@@ -35,10 +29,7 @@
                         <router-link to="/Games"><h4>Games</h4></router-link>
                     </div>
         <div class="kategorije-image-wrap">
-            
-        </div>
-        <div class="kategorije-detail">
-            
+            <router-link to="/Games"><img src="../assets/games.png"></router-link>
         </div>
     </div>
   </div>
@@ -49,10 +40,7 @@
                         <router-link to="/Tinte"><h4>Tinte</h4></router-link>
                     </div>
         <div class="kategorije-image-wrap">
-            
-        </div>
-        <div class="kategorije-detail">
-            
+            <router-link to="/Tinte"><img src="../assets/tinte.png"></router-link>
         </div>
     </div>
   </div>
@@ -63,10 +51,29 @@
                         <router-link to="/Mobile"><h4>Mobiteli</h4></router-link>
                     </div>
         <div class="kategorije-image-wrap">
-            
+            <router-link to="/Mobile"><img src="../assets/mobile.png"></router-link>
         </div>
-        <div class="kategorije-detail">
-            
+    </div>
+  </div>
+
+  <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Keyboard"><h4>Tipkovnice</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Keyboard"><img src="../assets/tipkovnice.png"></router-link>
+        </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Headphones"><h4>Slušalice</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Headphones"><img src="../assets/slusalice.png"></router-link>
         </div>
     </div>
   </div>
@@ -108,10 +115,4 @@ export default {
         z-index: 0;
         overflow: hidden;
     }
-     .kategorije-detail{
-        background-color: #FFF;
-        padding: 25px;
-        margin: 0px-25px;
-    }
-  
 </style>

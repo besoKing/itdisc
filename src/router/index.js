@@ -13,6 +13,8 @@ import Tinte from '../views/Tinte.vue'
 import Mobile from '../views/Mobile.vue'
 import Chargers from '../views/Chargers.vue'
 import Games from '../views/Games.vue'
+import Keyboard from '../views/Keyboard.vue'
+import Headphones from '../views/Headphones.vue'
 import * as firebase from "firebase/app"
 import "firebase/auth"
 
@@ -90,6 +92,16 @@ const routes = [
     path: '/Games',
     name: 'Games',
     component: Games
+  },
+  {
+    path: '/Keyboard',
+    name: 'Keyboard',
+    component: Keyboard
+  },
+  {
+    path: '/Headphones',
+    name: 'Headphones',
+    component: Headphones
   }
 ]
 
