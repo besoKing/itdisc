@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="links">
-            <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
+           <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl" @click="gotostore()"> 
                 <div class="links-inner">
                     <div class="links-text-wrap">
             
@@ -10,11 +10,12 @@
             
         </div>
         <div class="links-detail">
+             
             <h2>{{linkse.artikl}}</h2>
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
             <h6>Store: {{linkse.store}}</h6>
-            <v-btn type="submit">Goto Store</v-btn>
+           
         </div>
     </div>
   </div>
@@ -79,9 +80,7 @@ export default {
         })
     },
     methods:{
-        gotostore(){
-            window.open.href=linkse.url + encodeURIComponent(linkse.url);
-        }
+    
     }
     
 }
