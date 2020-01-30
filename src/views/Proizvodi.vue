@@ -14,7 +14,7 @@
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
             <h6>Store: {{linkse.store}}</h6>
-            <h6>Store: {{linkse.url}}</h6>
+            
             
         </div>
     </div>

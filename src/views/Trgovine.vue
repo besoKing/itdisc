@@ -5,22 +5,22 @@
                 <div class="kategorije-inner">
                     <div class="kategorije-text-wrap">
                         <router-link to="/Links"><h4>Links</h4></router-link>
+                        <router-link to="/Links"><img src="../assets/links.png"></router-link>
                     </div>
-        <div class="kategorije-image-wrap">
-            <router-link to="/Links"><img src="../assets/links.png"></router-link>
-        </div>
+        
     </div>
     </div>
 
 
     <div class="card-body">
                 <div class="kategorije-inner">
+                   
                     <div class="kategorije-text-wrap">
+                     
                         <router-link to="/Instar"><h4>Instar Informatika</h4></router-link>
+                         <router-link to="/Instar"><img src="../assets/instar.png"></router-link>
                     </div>
-        <div class="kategorije-image-wrap">
-            <router-link to="/Instar"><img src="../assets/instar.png"></router-link>
-        </div>
+        
     </div>
     </div>
   </div>
@@ -34,24 +34,20 @@
 
 
 <style lang="scss">
+
   .card {
-    margin: 10px
+    margin: 100px;
+    
   }
 
     .kategorije-inner{
         position: relative;
-        padding: 25px;
+        padding: 75px;
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     }
-    .kategorije-image-wrap{
-        position: relative;
-        z-index: 1;
-        transform-origin: center;
-    }
-    .kategorije-image-wrap .image{
-        width: 100%;
-        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.25));
-    }
+    
+   
+    
     .kategorije-text-wrap{
         position: absolute;
         top: 0;
