@@ -1,78 +1,66 @@
 <template>
-  <main id="Trgovine">
-      <section class="karticatrgovina">
-          <Karticatrgovine v-for="trgovina in Trgovina" :key="trgovina.color" :trgovina="trgovina"> 
+  <div class="container">
+        <h4>Trgovine</h4>
+        <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Links"><h4>Links</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Links"><img src="../assets/links.png"></router-link>
+        </div>
+    </div>
+    </div>
 
-          </Karticatrgovine>
-         
-      </section>
-  </main>
+
+    <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Instar"><h4>Instar Informatika</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Instar"><img src="../assets/instar.png"></router-link>
+        </div>
+    </div>
+    </div>
+  </div>
+
 </template>
 
-
-
 <script>
-import Karticatrgovine from '@/components/Karticatrgovine';
 
-  export default {
-    name: 'Trgovine',
-    components: {
-      Karticatrgovine
-    },
-    data(){
-        return{
-            Trgovina:[
-                {
-                  title:'Links',
-                  text:'Links d.o.o želi ponajprije zahvaliti svim onima koji su nam u proteklom periodu pružili povjerenje. Nadamo se da smo barem dijelom uspjeli opravdati Vaša očekivanja te Vam pomoći u odabiru informatičkog rješenja primjerenog Vašim zahtjevima.',
-                  bgtext:'LINKS',
-                  src: require('@/assets/links.png')
-                },
-                {
-                  title:'HGSpot',
-                  text:'Svaki proizvod zaslužuje svog čovjeka da ga pazi, mazi i najbitnije od svega koristi. HGSPOT brine o tome da svaki TECH proizvod pronađe svog zauvijek čovjeka, zato baci oko na www.hgshop.hr :)',
-                  color:'blue',
-                  bgtext:'HGSPOT',
-                  src: require('@/assets/hgspot.png')   
-                },
-                {
-                  title:'Instar',
-                  text: 'Tvrtka Instar informatika d.o.o. posluje od 2008. godine i bavi se maloprodajom, uvozom i veleprodajom informatičke i elektroničke opreme. Naši dobavljači su renomirani domaći, europski i svjetski distributeri i proizvođači IT opreme. Zahvaljujući efikasnim logističkim rješenjima, u mogućnosti smo ponuditi najbolje cijene za artikle koje prodajemo. Držimo samo najkvalitetniju robu na tržištu po izuzetno povoljnim cijenama, što potvrđuje velik broj stalnih kupaca te kontinuirani rast novih.',
-                  bgtext:'INSTAR',
-                  src: require('@/assets/instar.png')   
-                }
-            ]
-        }
-    }
-}
 </script>
 
 
 
 <style lang="scss">
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body{
-    font-family: 'montseratt', sans-serif;
-  }
-  main{
-    width: 100vw;
-    min-height: 100vh;
-    overflow: hidden;
-
-    background-color: #EEE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .card {
+    margin: 10px
   }
 
-  .karticatrgovina{
-    display: flex;
-    max-width: 1280px;
-    padding: 25px;
-    margin: 0 auto;
-  }
+    .kategorije-inner{
+        position: relative;
+        padding: 25px;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    }
+    .kategorije-image-wrap{
+        position: relative;
+        z-index: 1;
+        transform-origin: center;
+    }
+    .kategorije-image-wrap .image{
+        width: 100%;
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.25));
+    }
+    .kategorije-text-wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+    
+    
 </style>

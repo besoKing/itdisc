@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="proizvodi">
+        <div class="links">
             <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
                 <div class="links-inner">
                     <div class="links-text-wrap">
@@ -13,9 +13,7 @@
             <h2>{{linkse.artikl}}</h2>
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
-            <h6>Store: {{linkse.store}}</h6>
-            <h6>Store: {{linkse.url}}</h6>
-            
+            <button type="button" v-on:click="gotostore(linkse.url)">Goto Store</button>
         </div>
     </div>
   </div>
@@ -31,7 +29,6 @@
             <h2>{{instare.artikl}}</h2>
             <h4>Nova cijena: {{instare.newprc}}</h4>  
             <p>Stara cijena: {{instare.oldprc}}</p>
-            <h6>Store: {{instare.store}}</h6>
         </div>
     </div>
   </div>
@@ -40,44 +37,49 @@
 </template>
 
 <script>
-    import db from '@/main.js'
-    export default {
-    name:'proizvodi',
+import db from '../components/firebaseInit'
+export default {
+    name:'laptopi',
     data(){
         return{
             links:[],
-            instar:[],
+            instar:[]
         }
     },
     created(){
-        db.collection('Links').get().then(querySnapshot => {
+        db.collection('Links').where('Title','==','Laptop').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'url':doc.data().url,
-                    'store':doc.data().Store 
+                    'url':doc.data().url
                 }
                 this.links.push(data)
             })
         })
     },
-    mounted(){
-        db.collection('instar').get().then(querySnapshot => {
+    created(){
+        db.collection('instar').where('Title','==','Laptop').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'store':doc.data().Store 
+                    'url':doc.data().url
                 }
                 this.instar.push(data)
             })
         })
+    },
+    methods:{
+        gotostore(linkseurl){
+            window.open=linkse.url
+        }
     }
+    
 }
 </script>
 
@@ -87,13 +89,12 @@
     min-height: 100vh;
     overflow: hidden;
 
-    
+    background-color: #EEE;
     display: flex;
     justify-content: center;
     align-items: center;
 }
     .links{
-        background-color: lightblue;
         flex: 1 1 33.333%;
         width: 100%;
         padding: 25px;
@@ -145,10 +146,6 @@
         font-weight: 300;
         color: #676767;
 }
-    .links-detail h6{
-        display: flex;
-        justify-content: space-around;
-    }
     .instar-inner{
         position: relative;
         padding: 25px;

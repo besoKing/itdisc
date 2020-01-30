@@ -9,14 +9,14 @@
         <div class="links-image-wrap">
             
         </div>
-        <div class="links-detail">
-             
+        <div class="links-detail" >
             <h2>{{linkse.artikl}}</h2>
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
             <h6>Store: {{linkse.store}}</h6>
-           
+        
         </div>
+       
     </div>
   </div>
   <div class="card-body" v-for="instare in instar" v-bind:key="instare.artikl">
@@ -32,6 +32,7 @@
             <h4>Nova cijena: {{instare.newprc}}</h4>  
             <p>Stara cijena: {{instare.oldprc}}</p>
             <h6>Store: {{instare.store}}</h6>
+            
         </div>
     </div>
   </div>
@@ -80,7 +81,9 @@ export default {
         })
     },
     methods:{
-    
+        gotostore(linkseurl){
+            window.open.href=linkse.url 
+        }
     }
     
 }
@@ -92,15 +95,18 @@ export default {
     min-height: 100vh;
     overflow: hidden;
 
-    background-color: #EEE;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
     .links{
+        
         flex: 1 1 33.333%;
         width: 100%;
         padding: 25px;
+        
+        
     }
     .links-inner{
         position: relative;

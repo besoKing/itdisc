@@ -16,7 +16,9 @@ import Games from '../views/Category/Games.vue'
 import Keyboard from '../views/Category/Keyboard.vue'
 import Headphones from '../views/Category/Headphones.vue'
 import Adapteri from '../views/Category/Adapteri.vue'
+import Instar from '../views/Instar.vue'
 import * as firebase from "firebase/app"
+
 import "firebase/auth"
 
 
@@ -108,6 +110,11 @@ const routes = [
     path: '/Adapteri',
     name: 'Adapteri',
     component: Adapteri
+  },
+  {
+    path: '/Instar',
+    name: 'Instar',
+    component: Instar
   }
 ]
 

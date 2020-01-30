@@ -1,8 +1,8 @@
 <template>
 <div class="container">
 <div class="links">
-     <h2>Links</h2>
-    <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
+     <h2>Instar</h2>
+    <div class="card-body" v-for="instare in instar" v-bind:key="instare.artikl">
     <div class="links-inner">
         <div class="links-text-wrap">
             
@@ -11,9 +11,9 @@
             
         </div>
         <div class="links-detail">
-            <h2>{{linkse.artikl}}</h2>
-            <h4>Nova cijena: {{linkse.newprc}}</h4>  
-            <p>Stara cijena: {{linkse.oldprc}}</p>
+            <h2>{{instare.artikl}}</h2>
+            <h4>Nova cijena: {{instare.newprc}}</h4>  
+            <p>Stara cijena: {{instare.oldprc}}</p>
         </div>
     </div>
   </div>  
@@ -24,14 +24,14 @@
 <script>
 import db from '@/main.js'
 export default {
-    name:'links',
+    name:'instar',
     data(){
         return{
-            links:[]
+            instar:[]
         }
     },
     created(){
-        db.collection('Links').get().then(querySnapshot => {
+        db.collection('instar').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
@@ -39,7 +39,7 @@ export default {
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title 
                 }
-                this.links.push(data)
+                this.instar.push(data)
             })
         })
     }
