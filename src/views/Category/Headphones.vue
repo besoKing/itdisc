@@ -87,7 +87,6 @@ export default {
     min-height: 100vh;
     overflow: hidden;
 
-    background-color: #EEE;
     display: flex;
     justify-content: center;
     align-items: center;

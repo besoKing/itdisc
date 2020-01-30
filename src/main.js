@@ -6,6 +6,7 @@ import 'firebase/firestore'
 import firebaseConfig from './components/firebaseConfig'
 import axios from "axios"
 
+
 const firebaseApp = firebase.initializeApp(firebaseConfig)
 
 let app;

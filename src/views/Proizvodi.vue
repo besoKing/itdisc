@@ -14,6 +14,8 @@
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
             <h6>Store: {{linkse.store}}</h6>
+            <h6>Store: {{linkse.url}}</h6>
+            
         </div>
     </div>
   </div>
@@ -44,7 +46,7 @@
     data(){
         return{
             links:[],
-            instar:[]
+            instar:[],
         }
     },
     created(){
@@ -55,6 +57,7 @@
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
+                    'url':doc.data().url,
                     'store':doc.data().Store 
                 }
                 this.links.push(data)
@@ -84,12 +87,13 @@
     min-height: 100vh;
     overflow: hidden;
 
-    background-color: #EEE;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
     .links{
+        background-color: lightblue;
         flex: 1 1 33.333%;
         width: 100%;
         padding: 25px;
