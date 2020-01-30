@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import db from '../components/firebaseInit'
+import db from '@/main.js'
 export default {
     name:'links',
     data(){
