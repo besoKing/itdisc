@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="links">
+        <div class="proizvodi">
             <div class="card-body" v-for="linkse in links" v-bind:key="linkse.artikl">
                 <div class="links-inner">
                     <div class="links-text-wrap">
