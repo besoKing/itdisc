@@ -13,8 +13,7 @@
             <h2>{{linkse.artikl}}</h2>
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
-            <h6>Store: {{linkse.store}}</h6>
-            <button @click="gotostore">Goto Store</button>
+            <button type="button" v-on:click="gotostore(linkse.url)">Goto Store</button>
         </div>
     </div>
   </div>
@@ -30,7 +29,6 @@
             <h2>{{instare.artikl}}</h2>
             <h4>Nova cijena: {{instare.newprc}}</h4>  
             <p>Stara cijena: {{instare.oldprc}}</p>
-            <h6>Store: {{instare.store}}</h6>
         </div>
     </div>
   </div>
@@ -39,7 +37,7 @@
 </template>
 
 <script>
-import db from '@/components/firebaseInit'
+import db from '../components/firebaseInit'
 export default {
     name:'laptopi',
     data(){
@@ -56,14 +54,13 @@ export default {
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'url':doc.data().url,
-                    'store':doc.data().Store
+                    'url':doc.data().url
                 }
                 this.links.push(data)
             })
         })
     },
-    mounted(){
+    created(){
         db.collection('instar').where('Title','==','Laptop').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
@@ -71,15 +68,14 @@ export default {
                     'oldprc':doc.data().Cijenastara,
                     'newprc':doc.data().Cijenanova,
                     'title':doc.data().Title,
-                    'url':doc.data().url,
-                    'store':doc.data().Store
+                    'url':doc.data().url
                 }
                 this.instar.push(data)
             })
         })
     },
     methods:{
-        async gotostore(linkseurl){
+        gotostore(linkseurl){
             window.open=linkse.url
         }
     }

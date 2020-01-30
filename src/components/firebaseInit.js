@@ -1,9 +1,12 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
 import firebase from 'firebase'
 import 'firebase/firestore'
 import firebaseConfig from './firebaseConfig'
 
-
-
+Vue.use(VueRouter)
+Vue.config.productionTip = false
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
 
@@ -13,7 +16,7 @@ firebase.auth().onAuthStateChanged(user=>{
   console.log(user);
   if(!app){
     app=new Vue({
-      router,
+      Router,
       render: h => h(App)
     }).$mount('#app')
   }
