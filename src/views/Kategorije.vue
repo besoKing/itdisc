@@ -89,7 +89,40 @@
     </div>
   </div>
 
+  <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Mouse"><h4>Miševi</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Mouse"><img src="../assets/miševi.png"></router-link>
+        </div>
     </div>
+  </div>
+
+  <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Podloge"><h4>Podloge za miš</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Podloge"><img src="../assets/podloga.png"></router-link>
+        </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+                <div class="kategorije-inner">
+                    <div class="kategorije-text-wrap">
+                        <router-link to="/Printeri"><h4>Printeri</h4></router-link>
+                    </div>
+        <div class="kategorije-image-wrap">
+            <router-link to="/Printeri"><img src="../assets/printer.png"></router-link>
+        </div>
+    </div>
+  </div>
+
+</div>
 </template>
 
 <script>

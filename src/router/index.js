@@ -17,6 +17,9 @@ import Keyboard from '../views/Category/Keyboard.vue'
 import Headphones from '../views/Category/Headphones.vue'
 import Adapteri from '../views/Category/Adapteri.vue'
 import Instar from '../views/Instar.vue'
+import Mouse from '../views/Category/Mouse.vue'
+import Podloge from '../views/Category/Podloge.vue'
+import Printeri from '../views/Category/Printeri.vue'
 import * as firebase from "firebase/app"
 
 import "firebase/auth"
@@ -115,6 +118,21 @@ const routes = [
     path: '/Instar',
     name: 'Instar',
     component: Instar
+  },
+  {
+    path: '/Mouse',
+    name: 'Mouse',
+    component: Mouse
+  },
+  {
+    path: '/Podloge',
+    name: 'Podloge',
+    component: Podloge
+  },
+  {
+    path: '/Printeri',
+    name: 'Printeri',
+    component: Printeri
   }
 ]
 
