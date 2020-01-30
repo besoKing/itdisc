@@ -38,7 +38,7 @@
 <script>
 import db from '../components/firebaseInit'
 export default {
-    name:'laptopi',
+    name:'Games',
     data(){
         return{
             links:[],
@@ -46,7 +46,7 @@ export default {
         }
     },
     created(){
-        db.collection('Links').where('Title','==','Laptop').get().then(querySnapshot => {
+        db.collection('Links').where('Title','==','Games').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,
@@ -60,7 +60,7 @@ export default {
         })
     },
     mounted(){
-        db.collection('instar').where('Title','==','Laptop').get().then(querySnapshot => {
+        db.collection('instar').where('Title','==','Games').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const data={
                     'artikl':doc.data().Artikl,

@@ -9,6 +9,10 @@ import Trgovine from '../views/Trgovine.vue'
 import Links from '../views/Links.vue'
 import Kategorije from '../views/Kategorije.vue'
 import Laptopi from '../views/Laptopi.vue'
+import Tinte from '../views/Tinte.vue'
+import Mobile from '../views/Mobile.vue'
+import Chargers from '../views/Chargers.vue'
+import Games from '../views/Games.vue'
 import * as firebase from "firebase/app"
 import "firebase/auth"
 
@@ -66,6 +70,26 @@ const routes = [
     path: '/Laptopi',
     name: 'Laptopi',
     component: Laptopi
+  },
+  {
+    path: '/Tinte',
+    name: 'Tinte',
+    component: Tinte
+  },
+  {
+    path: '/Mobile',
+    name: 'Mobile',
+    component: Mobile
+  },
+  {
+    path: '/Chargers',
+    name: 'Chargers',
+    component: Chargers
+  },
+  {
+    path: '/Games',
+    name: 'Games',
+    component: Games
   }
 ]
 
