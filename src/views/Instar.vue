@@ -1,7 +1,7 @@
 <template>
 <div class="container">
 <div class="links">
-     <h2>Instar</h2>
+     <h2>Instar Informatika</h2>
     <div class="card-body" v-for="instare in instar" v-bind:key="instare.artikl">
     <div class="links-inner">
         <div class="links-text-wrap">
