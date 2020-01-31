@@ -14,7 +14,7 @@
             <h4>Nova cijena: {{linkse.newprc}}</h4>  
             <p>Stara cijena: {{linkse.oldprc}}</p>
             <h6>Store: {{linkse.store}}</h6>
-        
+            <button v-on:click="addtofav">Add</button>
         </div>
        
     </div>
@@ -32,7 +32,7 @@
             <h4>Nova cijena: {{instare.newprc}}</h4>  
             <p>Stara cijena: {{instare.oldprc}}</p>
             <h6>Store: {{instare.store}}</h6>
-            
+            <button v-on:click="addtofav">Add</button>
         </div>
     </div>
   </div>
@@ -81,8 +81,8 @@ export default {
         })
     },
     methods:{
-        gotostore(linkseurl){
-            window.open.href=linkse.url 
+        addtofav(){
+            //
         }
     }
     
